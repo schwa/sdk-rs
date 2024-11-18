@@ -2,6 +2,11 @@
 name = "sdk"
 version = "0.1.0"
 edition = "2021"
+description = "A tool for Xcode to show SDK paths."
+repository = "https://github.com/schwa/sdk-rs"
+homepage = "https://github.com/schwa/sdk-rs"
+license = "MIT"
+
 
 [dependencies]
 clap = { version = "4.5.21", features = ["derive"] }
