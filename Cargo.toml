@@ -1,15 +1,15 @@
 [dependencies]
 clipboard = "0.5.0"
-serde_json = "1.0.133"
+serde_json = "1.0.140"
 trigram = "0.4.4"
 
 [dependencies.clap]
 features = ["derive"]
-version = "4.5.21"
+version = "4.5.35"
 
 [dependencies.serde]
 features = ["derive"]
-version = "1.0.215"
+version = "1.0.219"
 
 [dependencies.tabled]
 features = ["derive"]
