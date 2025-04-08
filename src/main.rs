@@ -2,8 +2,7 @@ use serde::{Deserialize, Serialize};
 use std::process::Command;
 type Sdks = Vec<Sdk>;
 use clap::Parser;
-use clipboard::ClipboardContext;
-use clipboard::ClipboardProvider;
+use arboard::Clipboard;
 use std::path::PathBuf;
 use tabled::{Table, Tabled};
 use trigram::similarity;
@@ -121,8 +120,8 @@ fn main() {
                 .spawn()
                 .expect("failed to execute process");
         } else if cli.copy {
-            let mut ctx: ClipboardContext = ClipboardProvider::new().unwrap();
-            ctx.set_contents(result.display().to_string()).unwrap();
+            let mut clipboard = Clipboard::new().unwrap();
+            clipboard.set_text(result.display().to_string()).unwrap();
         } else {
             println!("{}", result.display());
         }
